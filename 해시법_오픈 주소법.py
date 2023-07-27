@@ -30,7 +30,7 @@ class OpenHash:
         self.table=[Bucket()]*self.capacity
 
     def hash_value(self,key:Any)->int:
-        key=key%self.capacity
+        return key%self.capacity
     
     def rehash_value(self,key:Any)->int:
         return(self.hash_value(key)+1)%self.capacity
